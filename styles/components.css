@@ -1,0 +1,29 @@
+.category {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 60px;
+    margin-bottom: 120px; /* Demo-Abstand zwischen den Kategorien, entfernen sobald Gerichte da sind */
+    padding-left: 175px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-family: "Palanquin", sans-serif;
+}
+
+.category-icon {
+    flex-shrink: 0;
+    width: 90px;
+    height: 91px;
+    object-fit: contain;
+}
+
+.category-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.category-subtitle {
+    font-weight: 400;
+}

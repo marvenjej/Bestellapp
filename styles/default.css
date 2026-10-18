@@ -1,4 +1,17 @@
-body {
+* {
     box-sizing: border-box;
     margin: 0;
+}
+
+:root {
+    --primary-color: rgba(231, 108, 31, 1);
+    --text-color: rgba(54, 53, 52, 1);
+    --primary-color-light: rgba(251, 205, 176, 1);
+    --content-max-width: 1440px;
+}
+
+.content {
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
 }
