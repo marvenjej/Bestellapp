@@ -7,7 +7,11 @@
     --primary-color: rgba(231, 108, 31, 1);
     --text-color: rgba(54, 53, 52, 1);
     --primary-color-light: rgba(251, 205, 176, 1);
+    --primary-color-extra-light: rgba(253, 234, 220, 1);
     --content-max-width: 1440px;
+    --category-height: 60px;
+    --products-gap: 64px;
+    --footer-height: 90px;
 }
 
 .content {

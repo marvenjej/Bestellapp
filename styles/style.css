@@ -103,7 +103,7 @@ nav {
 }
 
 footer {
-    height: 90px;
+    height: var(--footer-height);
     background-color: var(--primary-color);
     color: #fff;
     font-family: "Palanquin", sans-serif;

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/default.css">
     <link rel="stylesheet" href="./styles/components.css">
-    <link rel="stylesheet" href="./styles/baskets.css">
+    <link rel="stylesheet" href="./styles/basket.css">
 
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
@@ -46,10 +46,24 @@
                     <span class="rating-count">(317)</span>
                 </div>
             </div>
-            <p class="restaurant-subtitle">Das Beste aus Burgern, Pizza und Salaten – alles an einem großartigen Ort.</p>
+            <p class="restaurant-subtitle">Das Beste aus Burgern, Pizza und Salaten – alles an einem großartigen Ort.
+            </p>
         </section>
 
-        <main id="menu"></main>
+        <div class="menu-layout">
+            <main id="menu"></main>
+
+            <div class="basket-wrapper">
+                <aside class="basket">
+                    <h3>Dein Warenkorb</h3>
+                    <p>Hier ist nichts zu finden.</p>
+                    <p>Wähle aus unseren leckeren Gerichten!</p>
+                    <img class="basket-icon" src="./assets/icons/shopping_cart.svg" alt="Warenkorb">
+                </aside>
+            </div>
+        </div>
+
+        <div id="dialog-container"></div>
 
     </div>
 
