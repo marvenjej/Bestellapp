@@ -53,7 +53,8 @@
         <div class="menu-layout">
             <main id="menu"></main>
 
-            <div class="basket-wrapper">
+            <div class="basket-wrapper" id="basket-wrapper">
+                <button class="basket-close" type="button" onclick="toggleMobileBasket()">✕</button>
                 <aside class="basket" id="basket"></aside>
             </div>
         </div>
@@ -80,7 +81,7 @@
         <a class="mobile-nav-item" href="">
             <img src="./assets/icons/orders.svg" alt="Bestellungen">
         </a>
-        <button class="mobile-nav-item mobile-nav-basket" type="button">
+        <button class="mobile-nav-item mobile-nav-basket" type="button" onclick="toggleMobileBasket()">
             <img src="./assets/icons/mobile-basket.svg" alt="Warenkorb">
             <span class="mobile-nav-badge">3</span>
         </button>

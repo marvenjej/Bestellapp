@@ -46,9 +46,14 @@ function removeFromBasket(id) {
     renderBasket();
 }
 
+function toggleMobileBasket() {
+    document.getElementById("basket-wrapper").classList.toggle("basket-open");
+}
+
 function placeOrder() {
     basket = {};
     renderBasket();
+    document.getElementById("basket-wrapper").classList.remove("basket-open");
     openOrderDialog();
 }
 
