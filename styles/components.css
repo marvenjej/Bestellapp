@@ -19,12 +19,13 @@
 .category-title {
     margin: 0;
     font-weight: 600;
-    font-size: 28px;
+    font-size: clamp(32px, 1.28vw + 27.2px, 40px);
     line-height: 1;
 }
 
 .category-subtitle {
     font-weight: 400;
+    font-size: clamp(24px, 2.56vw + 14.4px, 40px);
 }
 
 .products {
@@ -51,6 +52,7 @@
     height: 121px;
     border-radius: 12px;
     object-fit: cover;
+    object-view-box: inset(12% 10% 8% 10%);
 }
 
 .product-info {
@@ -159,4 +161,107 @@
     margin-top: -18px;
     font-weight: 600;
     font-size: 18px;
+}
+@media (max-width: 1275px) {
+    .products {
+        max-width: none;
+        margin-left: 40px;
+        margin-right: 360px;
+    }
+
+    .category {
+        padding-left: 96px;
+    }
+}
+
+@media (max-width: 999px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .product-img {
+        width: 100%;
+        height: clamp(170px, 36vw, 300px);
+        object-view-box: none;
+        object-position: center 40%;
+    }
+
+    .product-info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "name name"
+            "description description"
+            "price button";
+        align-items: center;
+        gap: 0 16px;
+    }
+
+    .product-header {
+        display: contents;
+    }
+
+    .product-name {
+        grid-area: name;
+    }
+
+    .product-description {
+        grid-area: description;
+        max-width: none;
+    }
+
+    .product-price {
+        grid-area: price;
+        margin-top: 16px;
+    }
+
+    .product-button {
+        grid-area: button;
+        align-self: center;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .products {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 760px) {
+    .category {
+        position: relative;
+        justify-content: center;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    .category-icon {
+        position: absolute;
+        bottom: calc(100% - 15px);
+        left: 50%;
+        width: 58px;
+        height: auto;
+        transform: translateX(-50%);
+    }}
+
+@media (max-width: 334px) {
+    .category-title-extra {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .order-dialog {
+        height: 256px;
+        padding: 32px 24px;
+    }
+
+    .order-dialog-title {
+        font-size: 24px;
+    }
+
+    .order-dialog-text {
+        font-size: 16px;
+    }
 }

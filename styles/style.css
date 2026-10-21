@@ -1,5 +1,5 @@
 nav {
-    height: 128px;
+    height: clamp(79px, 12.73vw + 31.3px, 128px);
     background-color: var(--primary-color);
 }
 
@@ -16,6 +16,16 @@ nav {
 
 .nav-content>img {
     padding-right: 40px;
+}
+
+@media (max-width: 760px) {
+    .nav-content>a {
+        padding-left: 16px;
+    }
+
+    .nav-content>img {
+        display: none;
+    }
 }
 
 @media (min-width: 1441px) {
@@ -40,7 +50,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    padding: 124px 16px 48px;
+    padding: calc(var(--logo-size) / 2 + 24px) 16px 48px;
     color: var(--text-color);
     font-family: "Palanquin", sans-serif;
 }
@@ -56,12 +66,19 @@ nav {
     margin: 0;
     font-family: "Palanquin Dark", sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: clamp(40px, 1.28vw + 35.2px, 48px);
     line-height: 1;
 }
 
 .title-accent {
     color: var(--primary-color);
+}
+
+@media (max-width: 760px) {
+    .restaurant-title {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
 }
 
 .rating {
@@ -102,6 +119,23 @@ nav {
     text-align: center;
 }
 
+@media (max-width: 760px) {
+    .hero-section {
+        height: 345px;
+        margin: 25px 16px 0;
+        border-radius: 16px;
+        aspect-ratio: auto;
+    }
+
+    .restaurant-info {
+        margin-bottom: 32px;
+    }
+
+    .restaurant-subtitle {
+        line-height: 1.1;
+    }
+}
+
 footer {
     height: var(--footer-height);
     background-color: var(--primary-color);
@@ -125,10 +159,25 @@ footer {
 }
 
 .hero-section>img {
-    width: 200px;
-    height: 200px;
+    width: var(--logo-size);
+    height: var(--logo-size);
     transform: translateY(50%);
     box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border: 13px solid rgba(253, 234, 220, 1);
+    border: calc(var(--logo-size) * 0.065) solid rgba(253, 234, 220, 1);
     border-radius: 50%;
+}
+@media (max-width: 760px) {
+    footer {
+        height: auto;
+        padding: 24px 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-content>span {
+        order: 1;
+    }
 }

@@ -24,7 +24,7 @@ function openOrderDialog() {
     contentRef.innerHTML = getOrderDialogTemplate();
     document.getElementById("order-success").showModal();
     clearTimeout(orderDialogTimer);
-    orderDialogTimer = setTimeout(closeOrderDialog, 2500);
+    orderDialogTimer = setTimeout(closeOrderDialog, 15000);
 }
 
 function closeOrderDialog() {

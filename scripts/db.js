@@ -1,6 +1,7 @@
 let products = {
     burgers: {
-        title: "Burger & Sandwiches",
+        title: "Burger",
+        titleExtra: "& Sandwiches",
         icon: "./assets/icons/category-burger.png",
         dishes: [
             {

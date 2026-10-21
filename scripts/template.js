@@ -1,10 +1,11 @@
 function getCategoryTemplate(category) {
+    let extra = category.titleExtra ? ` <span class="category-title-extra">${category.titleExtra}</span>` : "";
     let subtitle = category.subtitle ? ` <span class="category-subtitle">${category.subtitle}</span>` : "";
 
     return `
         <section class="category">
-            <img class="category-icon" src="${category.icon}" alt="${category.title}">
-            <h2 class="category-title">${category.title}${subtitle}</h2>
+            <img class="category-icon" src="${category.icon}" alt="${category.title}${category.titleExtra ? " " + category.titleExtra : ""}">
+            <h2 class="category-title">${category.title}${extra}${subtitle}</h2>
         </section>`;
 }
 

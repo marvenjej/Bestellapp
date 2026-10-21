@@ -42,3 +42,87 @@
 .basket>img {
     margin-top: 70px;
 }
+@media (max-width: 1275px) {
+    .basket-wrapper {
+        width: 340px;
+    }
+
+    .basket {
+        width: 340px;
+        height: 620px;
+    }
+
+    .basket>h3 {
+        margin: 48px 0 24px;
+        font-size: 26px;
+    }
+
+    .basket>p {
+        font-size: 18px;
+    }
+
+    .basket>img {
+        width: 90px;
+        height: auto;
+        margin-top: 48px;
+    }
+}
+
+@media (max-width: 900px) {
+    .basket-wrapper {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-bottom: var(--mobile-nav-height);
+    }
+
+    .mobile-nav {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: var(--mobile-nav-height);
+        padding: 24px 0;
+        background-color: var(--text-color);
+    }
+
+    .mobile-nav-item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .mobile-nav-badge {
+        position: absolute;
+        top: -8px;
+        right: -10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: var(--primary-color);
+        font-family: "Palanquin", sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1;
+    }
+}

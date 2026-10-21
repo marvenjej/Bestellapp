@@ -12,6 +12,8 @@
     --category-height: 60px;
     --products-gap: 64px;
     --footer-height: 90px;
+    --mobile-nav-height: 72px;
+    --logo-size: clamp(120px, 12.8vw + 72px, 200px);
 }
 
 .content {
