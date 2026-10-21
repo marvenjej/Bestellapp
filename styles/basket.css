@@ -47,11 +47,24 @@
     flex-direction: column;
     gap: 12px;
     align-self: stretch;
-    margin: 0 -15px;
+    margin: 0 49px 0 -15px;
     margin-bottom: 36px;
-    padding: 0 64px 0 31px;
+    padding: 0 7px 0 31px;
     max-height: 387px;
     overflow-y: auto;
+}
+
+.basket-items::-webkit-scrollbar {
+    width: 8px;
+}
+
+.basket-items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.basket-items::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: var(--primary-color-extra-light);
 }
 
 .basket-summary {
@@ -185,7 +198,8 @@
     }
 
     .basket-items {
-        padding: 0 24px 0 16px;
+        margin-right: 2px;
+        padding: 0 7px 0 16px;
         max-height: 254px;
     }
 
@@ -332,7 +346,8 @@
         flex: 1;
         min-height: 0;
         max-height: none;
-        padding: 0 22px;
+        margin-right: 0;
+        padding: 0 7px 0 22px;
     }
 
     .basket-summary {
