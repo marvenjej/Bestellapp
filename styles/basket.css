@@ -6,7 +6,7 @@
     position: absolute;
     top: var(--category-height);
     right: 0;
-    bottom: calc(-1 * (var(--products-gap) + var(--footer-height)));
+    bottom: calc(-1 * var(--products-gap));
     width: 435px;
 }
 
