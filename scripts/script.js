@@ -17,6 +17,25 @@ function renderMenu() {
 function renderBasket() {
     document.getElementById("basket").innerHTML = getBasketTemplate();
     updateProductButtons();
+    updateBasketBadge();
+}
+
+function updateBasketBadge() {
+    let badgeRef = document.getElementById("mobile-nav-badge");
+    let count = getItemCount();
+
+    badgeRef.innerHTML = count;
+    badgeRef.classList.toggle("mobile-nav-badge-hidden", !count);
+}
+
+function getItemCount() {
+    let count = 0;
+
+    for (let id in basket) {
+        count += basket[id];
+    }
+
+    return count;
 }
 
 function updateProductButtons() {

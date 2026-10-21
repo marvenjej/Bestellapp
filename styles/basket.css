@@ -269,6 +269,10 @@
         font-size: 12px;
         line-height: 1;
     }
+
+    .mobile-nav-badge-hidden {
+        display: none;
+    }
 }
 
 .basket-close {
