@@ -39,7 +39,7 @@ function getOrderDialogTemplate() {
         <dialog id="order-success" class="order-dialog">
             <button class="order-dialog-close" type="button" onclick="closeOrderDialog()">✕</button>
             <img class="order-dialog-icon" src="./assets/icons/order-success.svg" alt="">
-            <h2 class="order-dialog-title">Bestellung bestätigt!</h2>
+            <h2 class="order-dialog-title">Testbestellung bestätigt!</h2>
             <p class="order-dialog-text">Deine Bestellung wird nun zubereitet und geliefert.</p>
         </dialog>`;
 }
