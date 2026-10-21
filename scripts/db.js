@@ -20,7 +20,7 @@ let products = {
             },
             {
                 id: "burger-3",
-                name: "Beef red burger",
+                name: "Süßmaus Burger",
                 price: 14.9,
                 description: "Rindfleisch, Käse, Tomaten, Kopfsalat, Zwiebel",
                 img: "./assets/img/products/beef-red-burger.jpg",
@@ -106,3 +106,5 @@ let products = {
 };
 
 let basket = {};
+
+let deliveryFee = 4.99;

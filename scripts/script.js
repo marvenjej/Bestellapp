@@ -1,5 +1,6 @@
 function init() {
     renderMenu();
+    renderBasket();
 }
 
 function renderMenu() {
@@ -11,6 +12,31 @@ function renderMenu() {
         menuRef.innerHTML += getCategoryTemplate(category);
         menuRef.innerHTML += getProductListTemplate(category.dishes);
     }
+}
+
+function renderBasket() {
+    document.getElementById("basket").innerHTML = getBasketTemplate();
+}
+
+function addToBasket(id) {
+    basket[id] = (basket[id] || 0) + 1;
+    renderBasket();
+}
+
+function removeFromBasket(id) {
+    basket[id]--;
+
+    if (basket[id] <= 0) {
+        delete basket[id];
+    }
+
+    renderBasket();
+}
+
+function placeOrder() {
+    basket = {};
+    renderBasket();
+    openOrderDialog();
 }
 
 function formatPrice(price) {
@@ -30,4 +56,24 @@ function openOrderDialog() {
 function closeOrderDialog() {
     clearTimeout(orderDialogTimer);
     document.getElementById("dialog-container").innerHTML = "";
+}
+
+function getSubtotal() {
+    let sum = 0;
+
+    for (let id in basket) {
+        sum += getDishById(id).price * basket[id];
+    }
+
+    return sum;
+}
+
+function getDishById(id) {
+    for (let key in products) {
+        for (let dish of products[key].dishes) {
+            if (dish.id === id) {
+                return dish;
+            }
+        }
+    }
 }
