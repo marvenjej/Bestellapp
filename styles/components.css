@@ -99,9 +99,18 @@
     background-color: #fff;
     color: var(--text-color);
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 16px;
     cursor: pointer;
+}
+
+.product-button-added {
+    color: var(--primary-color);
+}
+
+.product-button:hover {
+    color: var(--primary-color);
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .order-dialog {
@@ -162,6 +171,7 @@
     font-weight: 600;
     font-size: 18px;
 }
+
 @media (max-width: 1275px) {
     .products {
         max-width: none;
@@ -243,7 +253,8 @@
         width: 58px;
         height: auto;
         transform: translateX(-50%);
-    }}
+    }
+}
 
 @media (max-width: 334px) {
     .category-title-extra {

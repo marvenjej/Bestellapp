@@ -128,16 +128,18 @@
     grid-area: controls;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .basket-item-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     padding: 0;
     border: none;
+    border-radius: 6px;
     background: none;
     color: inherit;
     font-family: inherit;
@@ -149,16 +151,21 @@
 
 .basket-item-amount {
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: 24px;
+    height: 28px;
     font-weight: 700;
     font-size: 24px;
     line-height: 1;
 }
 
-.basket-item-button>img {
-    width: 16px;
-    height: 18px;
+.basket-trash-button {
+    padding-top: 6px;
+}
+
+.basket-trash-button:hover {
+    background-color: #fff;
+    color: var(--primary-color);
 }
 
 .basket-item-price {
@@ -257,8 +264,8 @@
         border-radius: 50%;
         background-color: #fff;
         color: var(--primary-color);
-        font-family: "Palanquin", sans-serif;
-        font-weight: 700;
+        font-family: "Figtree", sans-serif;
+        font-weight: 600;
         font-size: 12px;
         line-height: 1;
     }

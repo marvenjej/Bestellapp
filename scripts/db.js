@@ -107,4 +107,4 @@ let products = {
 
 let basket = {};
 
-let deliveryFee = 4.99;
+const deliveryFee = 4.99;

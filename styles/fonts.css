@@ -37,3 +37,11 @@
     font-display: swap;
     src: url("../assets/fonts/palanquin-dark-700.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "Figtree";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("../assets/fonts/figtree-600.woff2") format("woff2");
+}

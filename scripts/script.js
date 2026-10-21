@@ -16,6 +16,19 @@ function renderMenu() {
 
 function renderBasket() {
     document.getElementById("basket").innerHTML = getBasketTemplate();
+    updateProductButtons();
+}
+
+function updateProductButtons() {
+    for (let key in products) {
+        for (let dish of products[key].dishes) {
+            let buttonRef = document.getElementById("product-button-" + dish.id);
+            let amount = basket[dish.id];
+
+            buttonRef.innerHTML = amount ? "Hinzugefügt " + amount : "Hinzufügen";
+            buttonRef.classList.toggle("product-button-added", !!amount);
+        }
+    }
 }
 
 function addToBasket(id) {
