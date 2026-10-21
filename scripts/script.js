@@ -26,6 +26,7 @@ function updateBasketBadge() {
 
     badgeRef.innerHTML = count;
     badgeRef.classList.toggle("mobile-nav-badge-hidden", !count);
+    document.getElementById("mobile-nav-basket").classList.toggle("mobile-nav-basket-filled", count > 0);
 }
 
 function getItemCount() {

@@ -262,16 +262,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 30px;
+        height: 30px;
         padding: 0;
         border: none;
+        border-radius: 5px;
         background: none;
+        color: #fff;
         cursor: pointer;
+    }
+
+    .mobile-nav-item:hover {
+        background-color: rgba(255, 255, 255, 1);
+        color: var(--primary-color);
+    }
+
+    .mobile-nav-basket-filled {
+        color: var(--primary-color);
     }
 
     .mobile-nav-badge {
         position: absolute;
-        top: -8px;
-        right: -10px;
+        top: -5px;
+        right: -7px;
         display: flex;
         justify-content: center;
         align-items: center;
