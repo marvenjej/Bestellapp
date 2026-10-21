@@ -106,8 +106,10 @@
         "name name"
         "controls price";
     align-items: center;
+    align-content: space-between;
     gap: 8px 16px;
-    padding: 20px 20px 16px;
+    min-height: 121px;
+    padding: 20px 20px 12px;
     border-radius: 20px;
     background-color: var(--primary-color-extra-light);
     color: var(--text-color);
@@ -320,6 +322,10 @@
         font-size: 24px;
         line-height: 1;
         cursor: pointer;
+    }
+
+    .basket-item {
+        min-height: auto;
     }
 
     .basket-items {
