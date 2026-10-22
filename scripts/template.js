@@ -1,14 +1,19 @@
-function getCategoryTemplate(category) {
-    let extra = category.titleExtra ? ` <span class="category-title-extra">${category.titleExtra}</span>` : "";
-    let subtitle = category.subtitle ? ` <span class="category-subtitle">${category.subtitle}</span>` : "";
-
+function getCategoryTemplate(category, extra, subtitle, alt) {
     return `
         <section class="category">
             <div class="content category-content">
-                <img class="category-icon" src="${category.icon}" alt="${category.title}${category.titleExtra ? " " + category.titleExtra : ""}">
+                <img class="category-icon" src="${category.icon}" alt="${alt}">
                 <h2 class="category-title">${category.title}${extra}${subtitle}</h2>
             </div>
         </section>`;
+}
+
+function getCategoryExtraTemplate(text) {
+    return ` <span class="category-title-extra">${text}</span>`;
+}
+
+function getCategorySubtitleTemplate(text) {
+    return ` <span class="category-subtitle">${text}</span>`;
 }
 
 function getProductListTemplate(dishes) {

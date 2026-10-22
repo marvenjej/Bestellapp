@@ -9,7 +9,10 @@ function renderMenu() {
 
     for (let key in products) {
         let category = products[key];
-        menuRef.innerHTML += getCategoryTemplate(category);
+        let extra = category.titleExtra ? getCategoryExtraTemplate(category.titleExtra) : "";
+        let subtitle = category.subtitle ? getCategorySubtitleTemplate(category.subtitle) : "";
+        let alt = category.titleExtra ? category.title + " " + category.titleExtra : category.title;
+        menuRef.innerHTML += getCategoryTemplate(category, extra, subtitle, alt);
         menuRef.innerHTML += getProductListTemplate(category.dishes);
     }
 }
