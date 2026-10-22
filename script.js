@@ -27,6 +27,14 @@ function getProductsHtml(dishes) {
     return list;
 }
 
+function getBasketItemHtml(id, amount) {
+    let dish = getDishById(id);
+    let deleteButton = amount > 1 ? getBasketDeleteButtonTemplate(id) : "";
+    let minusButton = amount > 1 ? getBasketMinusButtonTemplate(id) : getBasketTrashButtonTemplate(id);
+
+    return getBasketItemTemplate(id, dish.name, amount, formatPrice(dish.price * amount), deleteButton, minusButton);
+}
+
 function renderBasket() {
     let itemsRef = document.querySelector(".basket-items");
     let scrollPosition = itemsRef ? itemsRef.scrollTop : 0;
