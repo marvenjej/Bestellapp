@@ -35,11 +35,25 @@ function getBasketItemHtml(id, amount) {
     return getBasketItemTemplate(id, dish.name, amount, formatPrice(dish.price * amount), deleteButton, minusButton);
 }
 
+function getBasketHtml() {
+    let items = "";
+
+    for (let id in basket) {
+        items += getBasketItemHtml(id, basket[id]);
+    }
+
+    if (!items) {
+        return getEmptyBasketTemplate();
+    }
+
+    return getBasketTemplate(items, getBasketSummaryTemplate(), formatPrice(getSubtotal() + deliveryFee));
+}
+
 function renderBasket() {
     let itemsRef = document.querySelector(".basket-items");
     let scrollPosition = itemsRef ? itemsRef.scrollTop : 0;
 
-    document.getElementById("basket").innerHTML = getBasketTemplate();
+    document.getElementById("basket").innerHTML = getBasketHtml();
 
     itemsRef = document.querySelector(".basket-items");
     if (itemsRef) {

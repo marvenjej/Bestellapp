@@ -75,22 +75,12 @@ function getBasketTrashButtonTemplate(id) {
     return `<button class="basket-item-button basket-trash-button" type="button" onclick="removeFromBasket('${id}')">${getTrashIcon()}</button>`;
 }
 
-function getBasketTemplate() {
-    let items = "";
-
-    for (let id in basket) {
-        items += getBasketItemHtml(id, basket[id]);
-    }
-
-    if (!items) {
-        return getEmptyBasketTemplate();
-    }
-
+function getBasketTemplate(items, summary, total) {
     return `
         <h3>Dein Warenkorb</h3>
         <div class="basket-items">${items}</div>
-        ${getBasketSummaryTemplate()}
-        <button class="basket-buy-button" type="button" onclick="placeOrder()">Kaufen (${formatPrice(getSubtotal() + deliveryFee)})</button>`;
+        ${summary}
+        <button class="basket-buy-button" type="button" onclick="placeOrder()">Kaufen (${total})</button>`;
 }
 
 function getBasketSummaryTemplate() {
