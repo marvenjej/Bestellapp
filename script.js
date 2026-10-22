@@ -13,8 +13,18 @@ function renderMenu() {
         let subtitle = category.subtitle ? getCategorySubtitleTemplate(category.subtitle) : "";
         let alt = category.titleExtra ? category.title + " " + category.titleExtra : category.title;
         menuRef.innerHTML += getCategoryTemplate(category, extra, subtitle, alt);
-        menuRef.innerHTML += getProductListTemplate(category.dishes);
+        menuRef.innerHTML += getProductListTemplate(getProductsHtml(category.dishes));
     }
+}
+
+function getProductsHtml(dishes) {
+    let list = "";
+
+    for (let dish of dishes) {
+        list += getProductTemplate(dish);
+    }
+
+    return list;
 }
 
 function renderBasket() {

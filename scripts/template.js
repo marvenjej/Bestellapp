@@ -16,13 +16,7 @@ function getCategorySubtitleTemplate(text) {
     return ` <span class="category-subtitle">${text}</span>`;
 }
 
-function getProductListTemplate(dishes) {
-    let list = "";
-
-    for (let dish of dishes) {
-        list += getProductTemplate(dish);
-    }
-
+function getProductListTemplate(list) {
     return `<div class="content"><div class="products">${list}</div></div>`;
 }
 
