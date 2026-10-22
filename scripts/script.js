@@ -66,6 +66,11 @@ function removeFromBasket(id) {
     renderBasket();
 }
 
+function deleteFromBasket(id) {
+    delete basket[id];
+    renderBasket();
+}
+
 function toggleMobileBasket() {
     document.getElementById("basket-wrapper").classList.toggle("basket-open");
 }

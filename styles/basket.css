@@ -123,6 +123,7 @@
 }
 
 .basket-item {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -191,6 +192,16 @@
 .basket-trash-button:hover {
     background-color: #fff;
     color: var(--primary-color);
+}
+
+.basket-item-delete {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.basket-item-delete+.basket-item-name {
+    padding-right: 36px;
 }
 
 .basket-item-price {
