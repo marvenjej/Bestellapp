@@ -15,7 +15,16 @@ function renderMenu() {
 }
 
 function renderBasket() {
+    let itemsRef = document.querySelector(".basket-items");
+    let scrollPosition = itemsRef ? itemsRef.scrollTop : 0;
+
     document.getElementById("basket").innerHTML = getBasketTemplate();
+
+    itemsRef = document.querySelector(".basket-items");
+    if (itemsRef) {
+        itemsRef.scrollTop = scrollPosition;
+    }
+
     updateProductButtons();
     updateBasketBadge();
 }
