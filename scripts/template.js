@@ -83,23 +83,21 @@ function getBasketTemplate(items, summary, total) {
         <button class="basket-buy-button" type="button" onclick="placeOrder()">Kaufen (${total})</button>`;
 }
 
-function getBasketSummaryTemplate() {
-    let subtotal = getSubtotal();
-
+function getBasketSummaryTemplate(subtotal, deliveryFee, total) {
     return `
         <div class="basket-summary">
             <div class="basket-summary-row">
                 <span>Zwischensumme</span>
-                <span>${formatPrice(subtotal)}</span>
+                <span>${subtotal}</span>
             </div>
             <div class="basket-summary-row">
                 <span>Lieferkosten</span>
-                <span>${formatPrice(deliveryFee)}</span>
+                <span>${deliveryFee}</span>
             </div>
             <hr class="basket-summary-line">
             <div class="basket-summary-row basket-summary-total">
                 <span>Gesamt</span>
-                <span>${formatPrice(subtotal + deliveryFee)}</span>
+                <span>${total}</span>
             </div>
         </div>`;
 }

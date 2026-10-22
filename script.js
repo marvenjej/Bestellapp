@@ -46,7 +46,11 @@ function getBasketHtml() {
         return getEmptyBasketTemplate();
     }
 
-    return getBasketTemplate(items, getBasketSummaryTemplate(), formatPrice(getSubtotal() + deliveryFee));
+    let subtotal = getSubtotal();
+    let total = formatPrice(subtotal + deliveryFee);
+    let summary = getBasketSummaryTemplate(formatPrice(subtotal), formatPrice(deliveryFee), total);
+
+    return getBasketTemplate(items, summary, total);
 }
 
 function renderBasket() {
