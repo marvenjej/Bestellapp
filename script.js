@@ -21,7 +21,7 @@ function getProductsHtml(dishes) {
     let list = "";
 
     for (let dish of dishes) {
-        list += getProductTemplate(dish);
+        list += getProductTemplate(dish, formatPrice(dish.price));
     }
 
     return list;

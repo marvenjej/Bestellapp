@@ -20,14 +20,14 @@ function getProductListTemplate(list) {
     return `<div class="content"><div class="products">${list}</div></div>`;
 }
 
-function getProductTemplate(dish) {
+function getProductTemplate(dish, price) {
     return `
         <article class="product">
             <img class="product-img" src="${dish.img}" alt="${dish.name}">
             <div class="product-info">
                 <div class="product-header">
                     <h3 class="product-name">${dish.name}</h3>
-                    <span class="product-price">${formatPrice(dish.price)}</span>
+                    <span class="product-price">${price}</span>
                 </div>
                 <p class="product-description">${dish.description}</p>
                 <button id="product-button-${dish.id}" class="product-button" type="button" onclick="addToBasket('${dish.id}')">Hinzufügen</button>
