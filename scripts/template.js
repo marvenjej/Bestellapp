@@ -4,8 +4,10 @@ function getCategoryTemplate(category) {
 
     return `
         <section class="category">
-            <img class="category-icon" src="${category.icon}" alt="${category.title}${category.titleExtra ? " " + category.titleExtra : ""}">
-            <h2 class="category-title">${category.title}${extra}${subtitle}</h2>
+            <div class="content category-content">
+                <img class="category-icon" src="${category.icon}" alt="${category.title}${category.titleExtra ? " " + category.titleExtra : ""}">
+                <h2 class="category-title">${category.title}${extra}${subtitle}</h2>
+            </div>
         </section>`;
 }
 
@@ -16,7 +18,7 @@ function getProductListTemplate(dishes) {
         list += getProductTemplate(dish);
     }
 
-    return `<div class="products">${list}</div>`;
+    return `<div class="content"><div class="products">${list}</div></div>`;
 }
 
 function getProductTemplate(dish) {
