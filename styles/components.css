@@ -280,3 +280,10 @@
         font-size: 16px;
     }
 }
+
+@media (max-width: 760px) {
+    .products {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
