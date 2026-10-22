@@ -81,13 +81,15 @@ function deleteFromBasket(id) {
 }
 
 function toggleMobileBasket() {
-    document.getElementById("basket-wrapper").classList.toggle("basket-open");
+    let isOpen = document.getElementById("basket-wrapper").classList.toggle("basket-open");
+    document.body.classList.toggle("no-scroll", isOpen);
 }
 
 function placeOrder() {
     basket = {};
     renderBasket();
     document.getElementById("basket-wrapper").classList.remove("basket-open");
+    document.body.classList.remove("no-scroll");
     openOrderDialog();
 }
 

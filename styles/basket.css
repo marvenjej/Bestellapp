@@ -346,6 +346,10 @@
         transition: transform 0.3s ease, visibility 0.3s;
     }
 
+    body.no-scroll {
+        overflow: hidden;
+    }
+
     .basket-wrapper.basket-open {
         transform: translateY(0);
         visibility: visible;
