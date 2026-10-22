@@ -30,15 +30,15 @@ Keine Frameworks, keine Bibliotheken: bewusst reines HTML, CSS und JavaScript.
 ```
 Bestellapp/
 ├── index.html
+├── script.js           # Logik: Rendering, Warenkorb, Berechnung
+├── style.css           # Grundlayout
 ├── scripts/
 │   ├── db.js           # Daten: Speisekarte, Warenkorb, Lieferkosten
-│   ├── template.js     # HTML-Templates für Gerichte, Warenkorb und Dialog
-│   └── script.js       # Logik: Rendering, Warenkorb, Berechnung
+│   └── template.js     # Reine HTML-Templates für Gerichte, Warenkorb und Dialog
 ├── styles/
-│   ├── style.css       # Grundlayout
 │   ├── components.css  # Speisekarte & Komponenten
 │   ├── basket.css      # Warenkorb & mobile Navigation
-│   ├── default.css
+│   ├── default.css     # Reset, Variablen, Content-Begrenzung
 │   └── fonts.css
 └── assets/
     ├── fonts/          # Palanquin & Figtree
